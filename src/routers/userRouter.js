@@ -27,6 +27,14 @@ const upload = multer({
   },
 });
 
+router.get("/users", async (req, res) => {
+  try {
+    res.send({ health: "up", status: "200" });
+  } catch (error) {
+    res.status(400).send({ error });
+  }
+});
+
 router.post("/users", async (req, res) => {
   // console.log(req.body);
   const user = new User(req.body);
