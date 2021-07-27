@@ -28,3 +28,10 @@ test("should convert temperature from celcius to fahrenheit", () => {
   const total = celsiusToFahrenheit(0);
   expect(total).toBe(32);
 });
+
+test("Async test demo", (done) => {
+  setTimeout(() => {
+    expect(1).toBe(2);
+    done();
+  }, 2000);
+});
