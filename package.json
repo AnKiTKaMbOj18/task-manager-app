@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "devE": "env-cmd ./config/dev.env nodemon src/index.js"
+    "devE": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "jest"
   },
   "author": "Ankit Kamboj",
   "license": "ISC",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.9"
   }
 }
