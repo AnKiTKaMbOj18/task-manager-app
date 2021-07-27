@@ -27,7 +27,7 @@ const upload = multer({
   },
 });
 
-router.get("/", async (req, res) => {
+router.get("/health", async (req, res) => {
   try {
     res.send({ health: "up", status: "200" });
   } catch (error) {
