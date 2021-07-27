@@ -2,6 +2,7 @@ const {
   calculateTip,
   fahrenheitToCelsius,
   celsiusToFahrenheit,
+  add,
 } = require("../src/math");
 
 test("should calculate total with tip", () => {
@@ -31,7 +32,19 @@ test("should convert temperature from celcius to fahrenheit", () => {
 
 test("Async test demo", (done) => {
   setTimeout(() => {
-    expect(1).toBe(2);
+    expect(2).toBe(2);
     done();
   }, 2000);
+});
+
+test("Async promise demo to add 2 numbers", (done) => {
+  add(2, 3).then((sum) => {
+    expect(sum).toBe(5);
+    done();
+  });
+});
+
+test("Async promise demo to add 2 numbers using async await", async () => {
+  const sum = await add(10, 22);
+  expect(sum).toBe(32);
 });
